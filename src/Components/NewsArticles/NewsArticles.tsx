@@ -33,6 +33,7 @@ function NewsArticles(props: INewsArticlesProps) {
     //Second arg = function runs when these change
     var request = new Request('http://newsapi.org/v2/top-headlines?' +
     'country=' + props.Country + '&' +
+    'q=' + props.SearchString + '&' +
     'apiKey=' + process.env.REACT_APP_API_KEY);
 
     console.log(request.url);
@@ -66,7 +67,12 @@ function NewsArticles(props: INewsArticlesProps) {
     return(
 
         <div>
-            <Grid container spacing={3}>
+            <Grid 
+            container 
+            spacing={1}
+            justify="center"
+            alignItems="center"
+            >
                 {Articles}
             </Grid>
         </div>

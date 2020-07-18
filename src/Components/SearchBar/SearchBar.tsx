@@ -14,6 +14,14 @@ function SearchBar(props: ISearchBarProps) {
     //Name of the state, method name to set the state, initial state
     const [NewsSearchTerm, setNewsSearchTerm] = useState<string | null>();
     const handleNewsSearchTermChange = (s: string | null) =>{
+        
+        let search: ISearchParameters = {
+            SearchString: String(s) || '',
+            Country: NewsCountryFilter || 'nz'
+        }
+
+        props.SetNewsSearch(search);
+
         setNewsSearchTerm(s);          
     }
 
@@ -50,6 +58,7 @@ function SearchBar(props: ISearchBarProps) {
                     <Select 
                         fullWidth 
                         value={NewsCountryFilter}
+                        defaultValue="nz"
                         onChange={e => handleNewsCountryFilterChange(e.target.value)}
                     >
                         <MenuItem value="">All</MenuItem>
@@ -60,9 +69,7 @@ function SearchBar(props: ISearchBarProps) {
                     </Select>
                 </Grid>
 
-                <Grid item xs={2}>
-                    <Button>Refresh</Button>
-                </Grid>
+                
                 
 
             </Grid>

@@ -3,7 +3,9 @@ import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
+import CardActions from '@material-ui/core/CardActions';
 import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 
 interface IArticleCardProps {
@@ -19,7 +21,7 @@ const useStyles = makeStyles({
         margin: 20,
     },
     root: {
-      maxWidth: 345,
+      maxWidth: 400,
     },
     media: {
       height: 140,
@@ -40,11 +42,16 @@ function ArticleCard(props: IArticleCardProps) {
                 />
                 <CardContent>
                     <Typography 
-                    variant="h5"
-                    component="h5">
+                    variant="subtitle1"
+                    >
                         {props.title}
                     </Typography>
                 </CardContent>
+                <CardActions>
+                <Button size="small" color="primary" href={props.url}>
+                Go To Article
+                </Button>
+                </CardActions>
             </Card>
             </div>
     )
