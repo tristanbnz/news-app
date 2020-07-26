@@ -34,7 +34,8 @@ function NewsArticles(props: INewsArticlesProps) {
     var request = new Request('http://newsapi.org/v2/top-headlines?' +
     'country=' + props.Country + '&' +
     'q=' + props.SearchString + '&' +
-    'apiKey=' + process.env.REACT_APP_API_KEY);
+    'apiKey=339838de24e04a079b403cf52e6eeb9f');
+    //'apiKey=' + process.env.REACT_APP_API_KEY); 
 
     console.log(request.url);
 
