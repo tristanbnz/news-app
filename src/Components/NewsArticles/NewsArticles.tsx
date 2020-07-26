@@ -31,7 +31,7 @@ function NewsArticles(props: INewsArticlesProps) {
 
     //First arg = function to run
     //Second arg = function runs when these change
-    var request = new Request('http://newsapi.org/v2/top-headlines?' +
+    var request = new Request('/v2/top-headlines?' +
     'country=' + props.Country + '&' +
     'q=' + props.SearchString + '&' +
     'apiKey=' + process.env.REACT_APP_API_KEY); 
