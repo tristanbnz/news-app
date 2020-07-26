@@ -11,7 +11,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  rootDir: 'news-app'
+  rootDir: '/'
   buildDir: '$(rootDir)/build'
 
 steps:
