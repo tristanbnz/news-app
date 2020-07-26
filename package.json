@@ -2,7 +2,6 @@
   "name": "news-app",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://newsapi.org",
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@testing-library/jest-dom": "^4.2.4",
@@ -12,6 +11,7 @@
     "@types/node": "^12.12.50",
     "@types/react": "^16.9.43",
     "@types/react-dom": "^16.9.8",
+    "http-proxy-middleware": "^1.0.5",
     "newsapi": "^2.4.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
